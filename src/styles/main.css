@@ -166,7 +166,7 @@ main .hero__cta {
 	color: black;
 	font-weight: 700;
 	display: inline-block;
-	padding: 12px 36px;
+	padding: 1.2rem 1.5rem;
 	border-radius: 90px;
 	transition: 350ms;
 	margin-top: 30px;
@@ -174,7 +174,7 @@ main .hero__cta {
 }
 
 main .hero__cta:hover {
-	scale: 1.15;
+	transform: scale(1.2);
 }
 
 .main__title {
@@ -198,6 +198,7 @@ main .hero__cta:hover {
 }
 
 .resto__name a {
+	padding: 1.3rem 1.3rem 1.3rem 0;
 	text-decoration: none;
 }
 

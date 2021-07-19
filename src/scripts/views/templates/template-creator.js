@@ -77,7 +77,7 @@ const createRestoDetail = (restorant) => `<div class="restoDetail_Wrapper">
 	</div>
 	</div>
 	</div>
-	<div class="detail-title text-center mt-5">Ayo Tulis Pengalaman mu di Restoran Ini ?</div>
+	<div class="detail-title text-center mt-5">Ayo Tulis Pengalaman mu di Restoran Ini</div>
 <div class="add_review_wrapper">
 	<div class="input_wrapper">
 	<form>

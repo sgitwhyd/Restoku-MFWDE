@@ -21,6 +21,14 @@ const postReviewInitiator = {
         name: this._nameReviewer.value,
         review: this._review.value,
       });
+
+      if (
+        this._nameReviewer.value.length === 0 ||
+				this._review.value.length === 0
+      ) {
+        alert('Nama Reviewer atau Isi Review tidak boleh kosong');
+        return;
+      }
       restoDataSource.postReview(data);
 
       const date = new Date().toLocaleDateString('id-ID', {
@@ -40,7 +48,7 @@ const postReviewInitiator = {
 
       alert('Terima Kasih Sudah Memberi Review Restoran Ini :)');
 
-      // make default input
+      // make default value input
       this._nameReviewer.value = '';
       this._review.value = '';
     });
