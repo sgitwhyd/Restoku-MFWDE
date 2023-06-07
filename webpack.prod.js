@@ -57,6 +57,7 @@ module.exports = merge(common, {
       swDest: './sw.bundle.js',
     }),
     new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
       openAnalyzer: false,
     }),
   ],
