@@ -5,9 +5,9 @@ import CONFIG from '../../globals/config';
 const createRestorantsItem = (restorant) => `<article class="resto_item">
 							<figure class="resto__image--wrapper">
 								<img
-									src="${CONFIG.BASE_IMAGE_URL}${restorant.pictureId}"
+									data-src="${CONFIG.BASE_IMAGE_URL}${restorant.pictureId}"
 									alt="${restorant.name}"
-									class="resto__image"
+									class="resto__image lazyload"
 								/>
 							</figure>
 							<div class="resto__content">
@@ -34,7 +34,9 @@ const createRestoDetail = (restorant) => `<div class="restoDetail_Wrapper">
 	<h3>Restorant Detail</h3>
 	<div class="flex-row">
 	<div class="resto_image">
-		<img src=${CONFIG.BASE_IMAGE_URL}${restorant.pictureId} alt=${restorant.name} />
+		<img class="lazyload" data-src=${CONFIG.BASE_IMAGE_URL}${
+  restorant.pictureId
+} alt=${restorant.name} />
 	</div>
 	<div class="resto_info">
 	<p class="resto_name">
@@ -82,9 +84,9 @@ const createRestoDetail = (restorant) => `<div class="restoDetail_Wrapper">
 	<div class="input_wrapper">
 	<form>
 	<label for="nama">Nama</label>
-	<input type="text" id="name" placeholder="Masukan Nama Kamu" required />
+	<input type="text" name="name" id="name" placeholder="Masukan Nama Kamu" required />
 	<label for="review">Review</label>
-	<textarea id="review" cols="5" rows="5" placeholder="Tulis Review Kamu Disini" required></textarea>
+	<textarea name="review" id="review" cols="5" rows="5" placeholder="Tulis Review Kamu Disini" required></textarea>
 	<button id="btn-submit" type="submit">Submit</button>
 	</form>
 	</div>
@@ -94,10 +96,10 @@ const createRestoDetail = (restorant) => `<div class="restoDetail_Wrapper">
 	${restorant.customerReviews
     .map(
       (review) => `<div class="review_customer" id="review_item">
-			<div class="review-title">Nama Customer :</div>
-        <p> ${review.name}</p>
-		<div class="review-title">Ulasan :</div>
-        <p>${review.review}</p>
+			<div class="review-sub">Nama Customer :</div>
+        <p class="review-title"> ${review.name}</p>
+		<div class="review-sub">Ulasan :</div>
+        <p class='review-body'>${review.review}</p>
         <div class="date-revs">${review.date}</div>
         </div>`,
     )
@@ -107,13 +109,13 @@ const createRestoDetail = (restorant) => `<div class="restoDetail_Wrapper">
 	`;
 
 const createLikeButtonTemplate = () => `
-  <button aria-label="like this movie" id="likeButton" class="like">
+  <button aria-label="like this restaurant" id="likeButton" class="like">
      <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
 `;
 
 const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this movie" id="likeButton" class="like">
+  <button aria-label="unlike this restaurant" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;

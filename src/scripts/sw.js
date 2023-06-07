@@ -1,20 +1,48 @@
-/* eslint-disable linebreak-style */
-// eslint-disable-next-line linebreak-style
+/* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
-/* eslint-disable linebreak-style */
+/* eslint-disable import/no-extraneous-dependencies */
+
 import 'regenerator-runtime';
-import CacheHelper from './utils/cache-helper';
+import { precacheAndRoute } from 'workbox-precaching';
+import { setCacheNameDetails } from 'workbox-core';
+import { registerRoute } from 'workbox-routing';
+import { CacheFirst, NetworkFirst } from 'workbox-strategies';
+import { ExpirationPlugin } from 'workbox-expiration';
 
-const { assets } = global.serviceWorkerOption;
-
-self.addEventListener('install', (event) => {
-  event.waitUntil(CacheHelper.cachingAppShell([...assets, './']));
+setCacheNameDetails({
+  prefix: 'restoku-apps',
+  suffix: 'v1',
+  precache: 'precache',
+  runtime: 'runtime',
 });
 
-self.addEventListener('activate', (event) => {
-  event.waitUntil(CacheHelper.deleteOldCache());
+precacheAndRoute(self.__WB_MANIFEST);
+
+self.addEventListener('install', () => {
+  console.log('Service Worker: Installing....');
+  self.skipWaiting();
 });
 
-self.addEventListener('fetch', (event) => {
-  event.respondWith(CacheHelper.revalidateCache(event.request));
+self.addEventListener('push', () => {
+  console.log('Service Worker: Pushed');
 });
+
+registerRoute(
+  new RegExp('https://use.fontawesome.com/releases/v5.15.3/css/all.css'),
+  new CacheFirst({
+    cacheName: 'fontawesome',
+  }),
+);
+
+registerRoute(
+  /^https:\/\/restaurant-api\.dicoding\.dev\/(?:(list|detail))/,
+  new NetworkFirst({
+    cacheName: 'cache-detail-restaurant',
+    plugins: [
+      new ExpirationPlugin({
+        maxAgeSeconds: 60 * 60 * 24 * 30,
+        maxEntries: 100,
+      }),
+    ],
+  }),
+);

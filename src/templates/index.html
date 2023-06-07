@@ -1,69 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<title>Restaurant Apps Starter Project</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="manifest" href="manifest.json" />
-		<link
-			rel="stylesheet"
-			href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-			integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
-			crossorigin="anonymous"
-		/>
-		<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-		<script src="https://use.fontawesome.com/b070c8f1df.js"></script>
-	</head>
-	<body>
-		<a href="#maincontent" class="skip-link">Skip to Content</a>
-		<header>
-			<nav role="navigation">
-				<div id="menuToggle">
-					<div class="navbar-brand">
-						<a href="#/home">RestoKu</a>
-					</div>
-					<!-- hamburger button -->
-					<button id="hamburger__button" aria-label="hamburger-button">
-						☰
-					</button>
-					<div id="navigation-web">
-						<ul id="menu">
-							<li><a href="#/home">Home</a></li>
-							<li><a href="#/favorite">Favorite</a></li>
-							<li>
-								<a
-									href="https://www.linkedin.com/in/sigit-wahyudi"
-									target="_blank"
-									rel="noopener"
-									>AboutUs</a
-								>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div id="navigation-mobile">
-					<ul id="menu">
-						<li><a href="#/home">Home</a></li>
-						<li><a href="#/favorite">Favorite</a></li>
-						<li>
-							<a
-								href="https://www.linkedin.com/in/sigit-wahyudi"
-								target="_blank"
-								rel="noopener"
-								>About Us</a
-							>
-						</li>
-					</ul>
-				</div>
-			</nav>
-		</header>
+  <head>
+    <meta charset="UTF-8" />
+    <title>RestoKu Apps</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="RestoKu adalah katalog restoran yang dibuat dengan teknologi Progressive Web Apps (PWA)"
+    />
+    <link rel="manifest" href="manifest.json" />
+    <link
+      rel="preload"
+      as="style"
+      onload="this.rel = 'stylesheet'"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
+  </head>
+  <body>
+    <a tabindex="0" href="#maincontent" class="skip-link">Skip to Content</a>
+    <header>
+      <nav role="navigation">
+        <div id="menuToggle">
+          <div class="navbar-brand">
+            <a href="/">RestoKu</a>
+          </div>
+          <!-- hamburger button -->
+          <button id="hamburger__button" aria-label="hamburger-button">
+            ☰
+          </button>
+          <div id="navigation-web">
+            <ul id="menu">
+              <li><a href="/">Home</a></li>
+              <li><a href="#/favorite">Favorite</a></li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/sigit-wahyudi"
+                  target="_blank"
+                  rel="noopener"
+                  >AboutUs</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="navigation-mobile">
+          <ul id="menu">
+            <li><a href="#/home">Home</a></li>
+            <li><a href="#/favorite">Favorite</a></li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/sigit-wahyudi"
+                target="_blank"
+                rel="noopener"
+                >About Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-		<div id="maincontent"></div>
+    <div id="maincontent"></div>
 
-		<footer class="footer">
-			<div class="footer__container">
-				<p class="footer__copyright">Copyright &COPY; 2021 - RestoKu</p>
-			</div>
-		</footer>
-	</body>
+    <footer class="footer">
+      <div class="footer__container">
+        <p class="footer__copyright">Copyright &COPY; 2021 - RestoKu</p>
+      </div>
+    </footer>
+  </body>
 </html>

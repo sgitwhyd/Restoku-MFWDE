@@ -6,8 +6,12 @@
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
+    "build-serve": "npm run build && npm run serve",
+    "serve": "http-server dist --port 9000",
     "lint": "eslint ./src",
-    "test": "karma start"
+    "test": "karma start",
+    "e2e": "codeceptjs run --steps",
+    "build-image": "node sharp.js"
   },
   "keywords": [],
   "author": "your_name <your.email@domain.com>",
@@ -16,6 +20,7 @@
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "babel-loader": "^8.1.0",
+    "codeceptjs": "^3.4.1",
     "copy-webpack-plugin": "^6.0.3",
     "css-loader": "^5.2.4",
     "eslint": "^7.30.0",
@@ -35,11 +40,25 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.0.9",
-    "whatwg-fetch": "^3.2.0"
+    "whatwg-fetch": "^3.2.0",
+    "workbox-precaching": "^7.0.0"
   },
   "dependencies": {
+    "@codeceptjs/configure": "^0.10.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "file-loader": "^6.2.0",
+    "http-server": "^14.1.1",
     "idb": "^6.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "lazysizes": "^5.3.2",
+    "puppeteer": "^20.5.0",
     "regenerator-runtime": "^0.13.5",
-    "serviceworker-webpack-plugin": "^1.0.1"
+    "serviceworker-webpack-plugin": "^1.0.1",
+    "sharp": "^0.32.1",
+    "webpack-bundle-analyzer": "^4.9.0",
+    "workbox-strategies": "^7.0.0",
+    "workbox-webpack-plugin": "^7.0.0"
   }
 }

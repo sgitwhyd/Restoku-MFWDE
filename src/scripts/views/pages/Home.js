@@ -8,10 +8,6 @@ const Home = {
     return `
      <main>
 			<div class="hero">
-				<div class="img-hero-wrapper">
-					<img src="./images/heros/hero-image_2.jpg" alt="" />
-				</div>
-
 				<div class="hero__inner">
 					<h1 class="hero__title">Makanan Lezat Ada di tangan Anda.</h1>
 					<p class="hero__tagline">

@@ -1,6 +1,5 @@
 /* eslint-disable consistent-return */
 import API_ENDPOINT from '../globals/api-endpoint';
-import CONFIG from '../globals/config';
 
 class restoDataSource {
   static async getListResto() {
@@ -24,7 +23,6 @@ class restoDataSource {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'X-Auth-Token': CONFIG.KEY_REVIEW,
       },
       body: data,
     });

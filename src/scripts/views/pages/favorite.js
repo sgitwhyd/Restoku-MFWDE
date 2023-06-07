@@ -1,7 +1,3 @@
-/* eslint-disable linebreak-style */
-// eslint-disable-next-line linebreak-style
-/* eslint-disable no-mixed-spaces-and-tabs */
-/* eslint-disable linebreak-style */
 /* eslint-disable no-tabs */
 import FavoriteRestorant from '../../data/favorite-resto-idb';
 import { createRestorantsItem } from '../templates/template-creator';
@@ -19,7 +15,7 @@ const Favorite = {
     `;
   },
   async afterRender() {
-	  try {
+    try {
       const restoContainer = document.querySelector('#detailResto');
       const restorants = await FavoriteRestorant.getAllResto();
       const detailTitle = document.querySelector('#title');
@@ -29,12 +25,12 @@ const Favorite = {
         });
         detailTitle.innerHTML = 'Your Favorite Restorant';
       } else {
-        detailTitle.innerHTML = '';
-        restoContainer.innerHTML =					"<h2 class='text-center mt-5'>No Items Display</h2>";
+        detailTitle.innerHTML = 'No Items Display';
       }
     } catch (error) {
       const restoContainer = document.querySelector('#detailResto');
-      restoContainer.innerHTML =				"<h2 class='text-center mt-5'>Ups.. Something Error Here...</h2>";
+      restoContainer.innerHTML =
+        "<h2 class='text-center mt-5'>Ups.. Something Error Here...</h2>";
     }
   },
 };
