@@ -6,8 +6,7 @@ import { createRestorantsItem } from '../templates/template-creator';
 const Home = {
   async render() {
     return `
-     <main>
-			<div class="hero">
+    <div class="hero">
 				<div class="hero__inner">
 					<h1 class="hero__title">Makanan Lezat Ada di tangan Anda.</h1>
 					<p class="hero__tagline">
@@ -15,13 +14,12 @@ const Home = {
 					</p>
 					<a href="#content_container" class="hero__cta">Selengkapnya</a>
 				</div>
-			</div>
-		</main>
-        <section class="main__container" id="content_container">
+		</div>
+      <section class="main__container" id="content_container">
 				<h2 class="main__title">Jelajahi Restoran</h2>
 				<div class="content-center">
 					<div class="resto" id="root-content">
-						<div class="resto__wrapper"></div>
+						<div  class="resto__wrapper"></div>
 					</div>
 				</div>
 			</section>

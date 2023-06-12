@@ -87,6 +87,7 @@ nav #navigation-mobile {
   background: #ffff;
   top: 80px;
   z-index: 999;
+  left: 0;
 }
 
 nav #navigation-mobile ul {
@@ -191,7 +192,10 @@ main .hero__cta:hover {
 }
 
 .resto__name a {
-  padding: 1.3rem 1.3rem 1.3rem 0;
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+  color: black;
   text-decoration: none;
 }
 
@@ -389,7 +393,7 @@ main .hero__cta:hover {
   right: 10%;
 }
 
-.input_wrapper form {
+.input_wrapper .review-form {
   display: flex;
   flex-direction: column;
 }
@@ -475,7 +479,7 @@ main .hero__cta:hover {
     padding: 0 !important;
   }
 
-  nav #hamburger__button {
+  #hamburger__button {
     display: none;
   }
   nav #navigation-mobile {
@@ -519,6 +523,9 @@ main .hero__cta:hover {
     padding: 1.3em;
     background: none;
     border: none;
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
   }
 
   nav #navigation-mobile ul li a {

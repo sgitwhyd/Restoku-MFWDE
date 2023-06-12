@@ -10,18 +10,15 @@
     />
     <link rel="manifest" href="manifest.json" />
     <link
-      rel="preload"
-      as="style"
-      onload="this.rel = 'stylesheet'"
-      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       crossorigin="anonymous"
     />
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
     <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
   </head>
   <body>
-    <a tabindex="0" href="#maincontent" class="skip-link">Skip to Content</a>
+    <a href="#maincontent" class="skip-link">Skip to Content</a>
     <header>
       <nav role="navigation">
         <div id="menuToggle">
@@ -64,7 +61,7 @@
       </nav>
     </header>
 
-    <div id="maincontent"></div>
+    <main tabindex="0" id="maincontent"></main>
 
     <footer class="footer">
       <div class="footer__container">

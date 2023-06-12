@@ -13,11 +13,11 @@ const createRestorantsItem = (restorant) => `<article class="resto_item">
 							<div class="resto__content">
 								<div class="resto__title">
 									<h2 class="resto__location">
-										<span><i class="fas fa-map-marker-alt"></i></span>
+										<span><i class="fa fa-map-marker"></i></span>
 										<span>${restorant.city}</span>
 									</h2>
 									<h2 class="resto__rating">
-										<span><i class="fas fa-star"></i></span>
+										<span><i class="fa fa-star"></i></span>
 										<span>${restorant.rating}</span>
 									</h2>
 								</div>
@@ -82,13 +82,13 @@ const createRestoDetail = (restorant) => `<div class="restoDetail_Wrapper">
 	<div class="detail-title text-center mt-5">Ayo Tulis Pengalaman mu di Restoran Ini</div>
 <div class="add_review_wrapper">
 	<div class="input_wrapper">
-	<form>
-	<label for="nama">Nama</label>
-	<input type="text" name="name" id="name" placeholder="Masukan Nama Kamu" required />
-	<label for="review">Review</label>
-	<textarea name="review" id="review" cols="5" rows="5" placeholder="Tulis Review Kamu Disini" required></textarea>
-	<button id="btn-submit" type="submit">Submit</button>
-	</form>
+			<div class="review-form" >
+			<label for="nama">Nama</label>
+			<input  type="text" name="name" id="name" placeholder="Masukan Nama Kamu" required />
+			<label for="review">Review</label>
+			<textarea  name="review" id="review" cols="5" rows="5" placeholder="Tulis Review Kamu Disini" required></textarea>
+			<button aria-label="submit review" id="btn-submit" type="submit">Submit</button>
+		</div>
 	</div>
 	</div>
 	<div class="detail-title reviewTitle text-center">Apa Kata Mereka ?</div>

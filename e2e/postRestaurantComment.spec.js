@@ -15,7 +15,7 @@ Scenario('post a comment in restaurant detail page', async ({ I }) => {
   const name = 'testing broh';
   const review = 'ini dari e2e anjay';
 
-  I.seeElement('form');
+  I.seeElement('.review-form');
   I.fillField('#name', name);
   I.fillField('#review', review);
 

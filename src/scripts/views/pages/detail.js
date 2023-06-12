@@ -10,10 +10,9 @@ const Detail = {
   async render() {
     return `
      <div class="content">
-        <div id="detailResto" class="detailResto">
-        </div>
-		<div id="likeButtonContainer">
-		</div>
+        <div id="detailResto" class="detailResto"></div>
+		    <div id="likeButtonContainer"></div>
+        <div class="add_review_wrapper">
       </div>
     `;
   },

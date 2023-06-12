@@ -5,13 +5,11 @@ import { createRestorantsItem } from '../templates/template-creator';
 const Favorite = {
   async render() {
     return `
-    <div class="content" id="maincontent">
-    <h2 id="title" class="text-center mt-3"></h2>
-        <div id="detailResto" class="detailResto">
-        </div>
-		<div id="likeButtonContainer">
-		</div>
-      </div>
+    <div class="content" tabindex="0">
+        <h2 id="title"  class="text-center mt-3"></h2>
+              <div id="detailResto" class="detailResto"></div>
+              <div id="likeButtonContainer"></div>
+    </div>
     `;
   },
   async afterRender() {

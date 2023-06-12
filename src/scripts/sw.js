@@ -28,7 +28,9 @@ self.addEventListener('push', () => {
 });
 
 registerRoute(
-  new RegExp('https://use.fontawesome.com/releases/v5.15.3/css/all.css'),
+  new RegExp(
+    'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+  ),
   new CacheFirst({
     cacheName: 'fontawesome',
   }),
